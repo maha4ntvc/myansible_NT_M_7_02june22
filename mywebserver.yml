@@ -7,4 +7,4 @@
     apt:   # by using apt module , we insall any softwares on ubuntu only.
       name: apache2
       state: present
-    when: ansible_os-family=="Debian"
+    when: ansible_os_family=="Debian"
