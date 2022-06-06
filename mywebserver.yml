@@ -1,8 +1,9 @@
 --- 
 - hosts: all
   become: yes  # sudo apt-get install apache2
+  gather_facts: yes
   tasks: 
   - name: install webserver 
-    apt:
+    apt:   # by using apt module , we insall any softwares on ubuntu only.
       name: apache2
       state: present
