@@ -3,8 +3,15 @@
   become: yes  # sudo apt-get install apache2
   gather_facts: yes
   tasks: 
-  - name: install webserver 
+  - name: install webserver  on ubuntu
     apt:   # by using apt module , we insall any softwares on ubuntu only.
       name: apache2
       state: present
     when: ansible_os_family=="Debian"
+
+  - name: install webserver on redhat
+    yum:
+       name: https
+       state: present
+    when: ansible_os_family =="RedHat"
+
