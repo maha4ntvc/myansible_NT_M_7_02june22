@@ -1,5 +1,5 @@
 --- 
-- hosts: all
+- hosts: mywebservers
   become: yes  # sudo apt-get install apache2
   gather_facts: yes
   tasks: 
