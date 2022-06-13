@@ -1,6 +1,6 @@
 ---
 - hosts: mywebservers
-  beocome: yes
+  become: yes
   tasks: 
   - name: i want to crate a file 
     file: 
