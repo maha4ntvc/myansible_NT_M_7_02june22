@@ -2,8 +2,13 @@
 - hosts: mywebservers
   become: yes
   tasks: 
-  - name: i want to crate a file 
+  - name: i want to crate a file  one
     file: 
        path: /home/maha/mytestONE
        state: touch
+  - include_tasks: myfile.yml
+
+
+
+    
       

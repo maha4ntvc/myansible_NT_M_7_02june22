@@ -1,0 +1,5 @@
+---
+  - name: i want to create a file Two
+    file:
+       path: /home/maha/mytestTWO
+       state: touch
