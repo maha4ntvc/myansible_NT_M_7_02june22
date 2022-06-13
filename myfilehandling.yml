@@ -13,12 +13,15 @@
       name: apache2
       state: present
 
-  - name: copy index file into  node side
+  - name: copy static index file into  node side
     copy:
        src:  myindex.html
        dest: /var/www/html/index.html
 
-
+  - name: copy dynamic index file into node side 
+    template:
+        src: myindex.j2
+        dest: /var/www/html/index.html
 
 
 
