@@ -1,0 +1,9 @@
+---
+- hosts: mywebservers
+  beocome: yes
+  tasks: 
+  - name: i want to crate a file 
+    file: 
+       path: /home/maha/mytestONE
+       state: touch
+      
