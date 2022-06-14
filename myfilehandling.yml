@@ -17,12 +17,14 @@
     copy:
        src:  myindex.html
        dest: /var/www/html/index.html
+    notify: intallgit
 
   - name: copy dynamic index file into node side 
     template:
         src: myindex.j2
         dest: /var/www/html/index.html
     notify: restartwervers
+  
 
   - name: download remote (internet) files 
     get_url:
@@ -35,6 +37,12 @@
     service:
       name: apache2
       state: restarted
+  - name: intallgit
+    apt:  
+      name: git 
+      state: present 
+
+  
 
 
     
