@@ -1,0 +1,10 @@
+---
+# tasks file for mytomrole
+
+- include_tasks: myuser.yml
+- include_tasks: installjava.yml
+- include_tasks: download.yml
+- include_tasks: permissions.yml
+- include_tasks: configureadminuser.yml
+- include_tasks: tomservice.yml
+- include_tasks: tomstart.yml
